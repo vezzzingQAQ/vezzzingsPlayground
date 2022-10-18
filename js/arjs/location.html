@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <a-scene embedded arjs="soucreType:webcaml;">
+        <a-camera gps-camera rotation-reader></a-camera>
+        <a-box material="color: yellow"
+            gps-entity-place="latitude: 30.359612246727064; longitude:  120.04159909247333" />
+    </a-scene>
+</body>
+
+</html>

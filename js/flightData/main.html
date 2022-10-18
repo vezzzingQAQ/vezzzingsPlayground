@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const data = null;
+
+        const xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === this.DONE) {
+                console.log(this.responseText);
+            }
+        });
+
+        xhr.open("GET", "https://adsbexchange-com1.p.rapidapi.com/v2/lat/51.46888/lon/-0.45536/dist/250/");
+        xhr.setRequestHeader("X-RapidAPI-Key", "cd3d662be4mshd919b2c03817126p1dd9f1jsn2f9a0a1686e3");
+        xhr.setRequestHeader("X-RapidAPI-Host", "adsbexchange-com1.p.rapidapi.com");
+
+        xhr.send(data);
+    </script>
+</body>
+
+</html>
